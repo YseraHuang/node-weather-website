@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit',(event)=>{ // the function runs each time 
     messageOne.textContent='Loading'// Use the textContent method to decide what to show in the front end
 
     //Only fetch when there is a submit
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>{ //fetch to the client side JS
+    fetch('/weather?address='+location).then((response)=>{ //fetch to the client side JS
         response.json().then((data)=>{
             if (data.error){
                 messageOne.textContent=data.error
